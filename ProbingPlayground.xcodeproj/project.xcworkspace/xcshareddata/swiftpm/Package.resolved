@@ -1,5 +1,5 @@
 {
-  "originHash" : "96a6b0a4f1cefc3919567e3b2634535dde1ad9b2051f533df111645e7fad77df",
+  "originHash" : "01e6ff637387cddffa897284b9c429bb83c350c9f092d6854ad1c32ae5d827a7",
   "pins" : [
     {
       "identity" : "principle",
@@ -17,14 +17,6 @@
       "state" : {
         "revision" : "e4b9e83001aa017f649e45e7657dee769eac7eef",
         "version" : "1.0.3"
-      }
-    },
-    {
-      "identity" : "probing",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/NSFatalError/Probing",
-      "state" : {
-        "revision" : "fe85c2008d56838c07a84197603b27c6d26e773d"
       }
     },
     {
