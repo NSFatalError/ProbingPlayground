@@ -14,5 +14,6 @@ struct ProbingPlaygroundApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowResizability(.contentSize)
     }
 }
