@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E2F959A2DCDE85200943E72 /* ProbeTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2F95992DCDE85200943E72 /* ProbeTesting */; };
-		8E2F959C2DCDE85200943E72 /* Probing in Frameworks */ = {isa = PBXBuildFile; productRef = 8E2F959B2DCDE85200943E72 /* Probing */; };
+		8E5665CD2DD25A43009C7C11 /* Probing in Frameworks */ = {isa = PBXBuildFile; productRef = 8E5665CC2DD25A43009C7C11 /* Probing */; };
+		8E5665CF2DD25A49009C7C11 /* ProbeTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8E5665CE2DD25A49009C7C11 /* ProbeTesting */; };
 		8EB753302DCFE811008AABFF /* ModuleB in Frameworks */ = {isa = PBXBuildFile; productRef = 8EB7532F2DCFE811008AABFF /* ModuleB */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2F959C2DCDE85200943E72 /* Probing in Frameworks */,
+				8E5665CD2DD25A43009C7C11 /* Probing in Frameworks */,
 				8EB753302DCFE811008AABFF /* ModuleB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E2F959A2DCDE85200943E72 /* ProbeTesting in Frameworks */,
+				8E5665CF2DD25A49009C7C11 /* ProbeTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 			);
 			name = ProbingPlayground;
 			packageProductDependencies = (
-				8E2F959B2DCDE85200943E72 /* Probing */,
 				8EB7532F2DCFE811008AABFF /* ModuleB */,
+				8E5665CC2DD25A43009C7C11 /* Probing */,
 			);
 			productName = ProbingPlayground;
 			productReference = 8E4A2F6A2DCBC03F00D941E7 /* ProbingPlayground.app */;
@@ -148,7 +148,7 @@
 			);
 			name = ProbingPlaygroundTests;
 			packageProductDependencies = (
-				8E2F95992DCDE85200943E72 /* ProbeTesting */,
+				8E5665CE2DD25A49009C7C11 /* ProbeTesting */,
 			);
 			productName = ProbingPlaygroundTests;
 			productReference = 8E4A2F782DCBC04000D941E7 /* ProbingPlaygroundTests.xctest */;
@@ -184,7 +184,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				8E479D362DCD2A39000A96E7 /* XCLocalSwiftPackageReference "MyLibrary" */,
-				8E2F95982DCDE85200943E72 /* XCLocalSwiftPackageReference "../Probing" */,
+				8E5665C72DD259F6009C7C11 /* XCRemoteSwiftPackageReference "Probing" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8E4A2F6B2DCBC03F00D941E7 /* Products */;
@@ -525,24 +525,33 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		8E2F95982DCDE85200943E72 /* XCLocalSwiftPackageReference "../Probing" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Probing;
-		};
 		8E479D362DCD2A39000A96E7 /* XCLocalSwiftPackageReference "MyLibrary" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = MyLibrary;
 		};
 /* End XCLocalSwiftPackageReference section */
 
-/* Begin XCSwiftPackageProductDependency section */
-		8E2F95992DCDE85200943E72 /* ProbeTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ProbeTesting;
+/* Begin XCRemoteSwiftPackageReference section */
+		8E5665C72DD259F6009C7C11 /* XCRemoteSwiftPackageReference "Probing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NSFatalError/Probing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
 		};
-		8E2F959B2DCDE85200943E72 /* Probing */ = {
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E5665CC2DD25A43009C7C11 /* Probing */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 8E5665C72DD259F6009C7C11 /* XCRemoteSwiftPackageReference "Probing" */;
 			productName = Probing;
+		};
+		8E5665CE2DD25A49009C7C11 /* ProbeTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E5665C72DD259F6009C7C11 /* XCRemoteSwiftPackageReference "Probing" */;
+			productName = ProbeTesting;
 		};
 		8EB7532F2DCFE811008AABFF /* ModuleB */ = {
 			isa = XCSwiftPackageProductDependency;
