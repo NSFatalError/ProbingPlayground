@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "F87EB0BE-B101-4344-9800-2C9E9CC5FAA8",
+      "name" : "Configuration",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ProbingPlayground.xcodeproj",
+        "identifier" : "8E4A2F772DCBC04000D941E7",
+        "name" : "ProbingPlaygroundTests"
+      }
+    }
+  ],
+  "version" : 1
+}

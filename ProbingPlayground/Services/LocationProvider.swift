@@ -9,12 +9,18 @@
 import CoreLocation
 
 protocol LocationProvider {
-    associatedtype Updates: AsyncSequence<CLLocationUpdate, any Error>
-    func getUpdates() -> Updates
+    func getUpdates() -> any AsyncSequence<any LocationUpdate, any Error>
+}
+
+protocol LocationUpdate {
+    var location: CLLocation? { get }
+    var authorizationDenied: Bool { get }
 }
 
 struct SystemLocationProvider: LocationProvider {
-    func getUpdates() -> CLLocationUpdate.Updates {
-        CLLocationUpdate.liveUpdates()
+    func getUpdates() -> any AsyncSequence<any LocationUpdate, any Error> {
+        CLLocationUpdate.liveUpdates().map { $0 as LocationUpdate }
     }
 }
+
+extension CLLocationUpdate: LocationUpdate {}
