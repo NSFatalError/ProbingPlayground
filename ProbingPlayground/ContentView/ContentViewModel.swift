@@ -137,7 +137,7 @@ final class ContentViewModel {
         try? await Task.sleep(for: uploadingFinishedPresentationDuration)
         uploadState = nil
 
-        #ConcurrentEffect("processorCleanup") {
+        #Effect("processorCleanup") { @concurrent in
             await self.processor.clearCache()
         }
     }
@@ -146,7 +146,7 @@ final class ContentViewModel {
 
     func beginUpdatingLocation() {
         locationState = .unknown
-        #Effect("location") {
+        locationUpdatesEffect = #Effect("location") {
             do {
                 for try await update in self.locationProvider.getUpdates() {
                     try Task.checkCancellation()
